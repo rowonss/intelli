@@ -11,7 +11,9 @@ public class scbyunsu {
          float f = 123.4567890f;
         System.out.printf("%f\n", f);
         System.out.printf("%g\n", 0.0000000001);
-        
+
         Scanner scanner = new Scanner(System.in);
     }
 }
+
+//
