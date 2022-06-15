@@ -19,5 +19,6 @@ public class basic사용자_입력창 {
             input = Integer.parseInt(temp);
         }
         while(true);
+
     }
 }
