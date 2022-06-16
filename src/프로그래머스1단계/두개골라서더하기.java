@@ -1,3 +1,5 @@
+package 프로그래머스1단계;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -16,7 +18,7 @@ public class 두개골라서더하기 {
 
     class Solution {
         public static int[] solution(int[] numbers) {
-            ArrayList<Integer> list = new ArrayList<Integer>();
+            ArrayList<Integer> list = new ArrayList();
             for(int i=0; i<numbers.length-1; i++){
                 for(int l=i+1; l<numbers.length; l++){
                     int sum = numbers[i]+numbers[l];
