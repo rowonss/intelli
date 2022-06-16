@@ -19,6 +19,7 @@ class Solution2 {
         String tr = "소수입니다";
         String fa = "소수가 아닙니다";
         int count = 0;
+        System.out.println();
         for (int i = 1; i <= nums; i++) {
 
             if (nums % i == 0) {
@@ -33,5 +34,6 @@ class Solution2 {
         }
     }
 }
+
 
 
