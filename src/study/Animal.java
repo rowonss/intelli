@@ -18,3 +18,14 @@ public class Animal {
 
 
 }
+
+class price {
+    private int value;
+    public price(int value){this.value = value;}
+
+    public int getValue(){
+        return this.value;
+    }
+
+
+}
