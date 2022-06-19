@@ -2,7 +2,7 @@ package JAVA_Basic;
 
 import javax.swing.*;
 
-public class basic사용자_입력창 {
+public class basic_1_사용자_입력창 {
     public static void main (String[] args){
 
         int answer = (int) (Math.random()*100) + 1;

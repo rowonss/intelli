@@ -1,6 +1,6 @@
 package JAVA_Basic;
 
-public class basic사용자입력받기 {
+public class basic_2_사용자입력받기 {
 
     public static void main(String[] args){
         int[] abc = {1,2,3,4,5};
