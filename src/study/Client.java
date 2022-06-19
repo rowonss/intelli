@@ -7,7 +7,6 @@ public class Client {
         tiger.setName("호랑이");
         System.out.println(monkey.getName());
 
-sdf
         cass beer = new cass("맥주");
 
         System.out.println();
