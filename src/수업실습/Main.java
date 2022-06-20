@@ -62,6 +62,7 @@ public class Main {
         if( notebook != null){
             notebook.getinfo();
         }
+        user();
 
 //        System.out.println(notebook.names);
     }

@@ -27,11 +27,11 @@ public class notebook {
     }
 
     public void getinfo (){
-        System.out.println(this.modelname);
-        System.out.println(this.cpu);
-        System.out.println(this.ram);
-        System.out.println(this.ssd);
-        System.out.println(this.monitorsize);
+        System.out.println("제품명 : "+this.modelname);
+        System.out.println("CPU : "+this.cpu);
+        System.out.println("RAM : "+this.ram+"G");
+        System.out.println("SSD : "+this.ssd+"GB");
+        System.out.println("모니터사이즈 : "+this.monitorsize+"인치");
     }
 
 
