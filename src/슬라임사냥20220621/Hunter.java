@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Hunter {
 
     public String name;
-    public int str;
-    public int Hp;
+    public static int str;
+    public static int Hp;
 
     public static ArrayList<String> names = new ArrayList<String>();
 

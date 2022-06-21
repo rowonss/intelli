@@ -73,7 +73,7 @@ public class lobby {
         int slimeHp = (int)(Math.random()*50+20);
         int slimestr = (int)(Math.random()*10+5);
         slime slime = new slime("초록 슬라임", slimeHp, slimestr);
-        System.out.println("초록 슬라임이 나타났다!!");
+        System.out.println(slime.name+"이 나타났다!!");
         System.out.println("이름 :"+slime.name);
         System.out.println("체력 :"+slime.Hp);
         System.out.println("공격력 :"+slime.str);
@@ -117,20 +117,43 @@ public class lobby {
     }
     public void battle(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("=============================================⣿⣿⣿⣿⣿⣿⣿⡿⠛⠉⠉⠉⠉⠛⠻⣿⣿⠿⠛⠛⠙⠛⠻⣿⣿⣿⣿⣿⣿⣿===========");
-        System.out.println("=============================================⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⢀⣀⣀⡀⠀⠈⢄⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿==============");
-        System.out.println("=============================================⣿⣿⣿⣿⠏⠀⠀⠀⠔⠉⠁⠀⠀⠈⠉⠓⢼⡤⠔⠒⠀⠐⠒⠢⠌⠿⢿⣿⣿⣿===========");
-        System.out.println("========================이름 :"+slime.name+"=======⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⢀⠤⣒⠶⠤⠭⠭⢝⡢⣄⢤⣄⣒⡶⠶⣶⣢⡝⢿⣿================");
-        System.out.println("========================체력 :"+slime.Hp+"==============⡿⠋⠁⠀⠀⠀⠀⣀⠲⠮⢕⣽⠖⢩⠉⠙⣷⣶⣮⡍⢉⣴⠆⣭⢉⠑⣶⣮⣅⢻============");
-        System.out.println("========================공격력 :"+slime.str+"==============⠀⠀⠀⠀⠀⠀⠀⠉⠒⠒⠻⣿⣄⠤⠘⢃⣿⣿⡿⠫⣿⣿⣄⠤⠘⢃⣿⣿⠿⣿=========");
-        System.out.println("=============================================⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⠤⠭⣥⣀⣉⡩⡥⠴⠃⠀⠈⠉⠁⠈⠉⠁⣴⣾⣿===========================");
-        System.out.println("==============================================⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠤⠔⠊⠀⠀⠀⠓⠲⡤⠤⠖⠐⢿⣿⣿⣿==========================");
-        System.out.println("=======[1. 공격하기]===========================⠀⠀⠀⠀⠀⠀⠀⠀⣠⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿====================");
-        System.out.println("=======[2. 스킬사용]==========================⠀⠀⠀⠀⠀⠀⠀⢸⣿⡻⢷⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣘⣿⣿======================");
-        System.out.println("============================================⠀⠀⠀⠀⠀⠠⡀⠀⠙⢿⣷⣽⣽⣛⣟⣻⠷⠶⢶⣦⣤⣤⣤⣤⣶⠾⠟⣯⣿⣿=====================");
-        System.out.println("============================================⠀⠀⠀⠀⠀⠀⠉⠂⠀⠀⠀⠈⠉⠙⠛⠻⠿⠿⠿⠿⠶⠶⠶⠶⠾⣿⣟⣿⣿⣿======================");
+        System.out.println("=============================================⣿⣿⣿⣿⣿⣿⣿⡿⠛⠉⠉⠉⠉⠛⠻⣿⣿⠿⠛⠛⠙⠛⠻⣿");
+        System.out.println("=============================================⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⢀⣀⣀⡀⠀⠈⢄⠀⠀⠀⠀⠀⠀⠀⢻⣿");
+        System.out.println("=============================================⣿⣿⣿⣿⠏⠀⠀⠀⠔⠉⠁⠀⠀⠈⠉⠓⢼⡤⠔⠒⠀⠐⠒⠢⠌⠿⢿⣿");
+        System.out.println("========================이름 :"+slime.name+"=======⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⢀⠤⣒⠶⠤⠭⠭⢝⡢⣄⢤⣄⣒⡶⠶⣶⣢⡝⢿");
+        System.out.println("========================체력 :"+slime.Hp+"==============⡿⠋⠁⠀⠀⠀⠀⣀⠲⠮⢕⣽⠖⢩⠉⠙⣷⣶⣮⡍⢉⣴⠆⣭⢉⠑⣶⣮⣅⢻");
+        System.out.println("========================공격력 :"+slime.str+"==============⠀⠀⠀⠀⠀⠀⠀⠉⠒⠒⠻⣿⣄⠤⠘⢃⣿⣿⡿⠫⣿⣿⣄⠤⠘⢃⣿⣿⠿");
+        System.out.println("=============================================⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⠤⠭⣥⣀⣉⡩⡥⠴⠃⠀⠈⠉⠁⠈⠉⠁⣴⣾⣿");
+        System.out.println("==============================================⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠤⠔⠊⠀⠀⠀⠓⠲⡤⠤⠖⠐⢿⣿");
+        System.out.println("=======[1. 공격하기]===========================⠀⠀⠀⠀⠀⠀⠀⠀⣠⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿");
+        System.out.println("=======[2. 스킬사용]==========================⠀⠀⠀⠀⠀⠀⠀⢸⣿⡻⢷⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣘⣿");
+        System.out.println("============================================⠀⠀⠀⠀⠀⠠⡀⠀⠙⢿⣷⣽⣽⣛⣟⣻⠷⠶⢶⣦⣤⣤⣤⣤⣶⠾⠟⣯⣿");
+        System.out.println("============================================⠀⠀⠀⠀⠀⠀⠉⠂⠀⠀⠀⠈⠉⠙⠛⠻⠿⠿⠿⠿⠶⠶⠶⠶⠾⣿⣟⣿");
         System.out.println("행동을 입력 해주세요");
         int num = sc.nextInt();
+        if(num == 1){
+            int damage = (int)(Math.random()*Hunter.str);
+            slime.Hp -= damage;
+            System.out.println(damage+"의 데미지를 입혔습니다!");
+            System.out.println("남은 체력 :"+slime.Hp);
+        }
+        else if(num == 2){
+            int damage = (int)((Math.random()*Hunter.str)*2);
+            slime.Hp -= damage;
+            System.out.println("씨게 때리기!!");
+            System.out.println(damage+"의 데미지를 입혔습니다!");
+            System.out.println("남은 체력 :"+slime.Hp);
+        }
+        System.out.println(slime.name+"의 반격합니다!!");
+        System.out.println("아무 숫자나 입력하여 진행");
+        int d = sc.nextInt();
+        int damage2 = (int)(Math.random()*slime.str);
+        Hunter.Hp -= damage2;
+        System.out.println(damage2+"의 피해를 받았습니다!");
+        System.out.println("남은 체력 :"+Hunter.Hp);
+        System.out.println("아무 숫자나 입력하여 진행");
+        int  s = sc.nextInt();
+        battle();
 
 
 
