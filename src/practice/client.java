@@ -15,6 +15,8 @@ public class client {
 
     public static void user() {
 
+        machine set = new machine();
+
         Scanner sc = new Scanner(System.in);
         System.out.println("1. 메뉴 목록 " + "2. 음료 구매" + "3. 메뉴 추가"  + "4. 금액 투입");
         System.out.println("번호를 입력해주세요");
@@ -79,6 +81,14 @@ public class client {
     }
 
     public static void buy(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("투입된 금액 : "+money+"원");
+        System.out.println("구매하실 상품의 번호를 선택해주세요");
+        for (int i = 0; i < machine.drinklist.size(); i++) {
+            System.out.println(i + 1 + "." + machine.drinklist.get(i)+" "+machine.drinkprice.get(i)+"원");
+        }
+        int num = sc.nextInt();
+
 
     }
 

@@ -17,4 +17,13 @@ public class machine {
         drinkprice.add(price);
     }
 
+    machine(){
+        drinklist.add("코카콜라");
+        drinkprice.add(1500);
+        drinklist.add("스프라이트");
+        drinkprice.add(1300);
+        drinklist.add("펩시");
+        drinkprice.add(1000);
+    }
+
 }
