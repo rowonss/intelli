@@ -16,20 +16,25 @@ public class client {
     public static void user() {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("1. 메뉴 목록 " + "2. 금액 투입" + "3. 메뉴 추가");
+        System.out.println("1. 메뉴 목록 " + "2. 음료 구매" + "3. 메뉴 추가"  + "4. 금액 투입");
         System.out.println("번호를 입력해주세요");
         System.out.println("현재 금액" +money+ "원");
         int num = sc.nextInt();
         if (num == 1) {
+            System.out.println("===========================");
             for (int i = 0; i < machine.drinklist.size(); i++) {
-                System.out.println(i + 1 + "." + machine.drinklist.get(i)+ machine.);
+                System.out.println(i + 1 + "." + machine.drinklist.get(i)+" "+machine.drinkprice.get(i)+"원");
             }
+            System.out.println("===========================");
             user();
-        } else if (num == 2) {
+        } else if (num == 4) {
             moneyin();
         }
         else if(num ==3){
             setting();
+        }
+        else if(num ==2){
+            buy();
         }
 
     }
@@ -70,6 +75,10 @@ public class client {
         } else if (re == 1) {
             setting();
         }
+
+    }
+
+    public static void buy(){
 
     }
 
