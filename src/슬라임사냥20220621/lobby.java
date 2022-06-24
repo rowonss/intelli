@@ -4,6 +4,8 @@ import java.util.*;
 
 public class lobby {
 
+    int maxmove = 0;
+
 
 
 

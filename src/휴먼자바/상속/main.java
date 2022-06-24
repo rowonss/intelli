@@ -12,7 +12,7 @@ public class main {
 
     public static void kkaa(){
 
-        class2 class2 = new class2(24, 24);
+        class2 class2 = new class2();
 
         class2.setting();
     }
