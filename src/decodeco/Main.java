@@ -4,8 +4,11 @@ public class Main {
     
     public static void main(String[] args) {
         
-        toping ramen = new toping();
-        System.out.println(ramen.newmake());
+        Component ramen = new toping();
+        System.out.println(ramen.make());
+
+        Component sea = new toping("해물");
+        System.out.println(sea.make());
 
 //        Component kimchRamen = new Kimchi(new Ramen());
 //        System.out.println(kimchRamen.make());
