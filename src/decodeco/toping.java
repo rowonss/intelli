@@ -3,6 +3,8 @@ package decodeco;
 public class toping extends Component {
 
     public String name;
+    public String name;
+    public String name;
 
     public toping (String name){
         super(name);
