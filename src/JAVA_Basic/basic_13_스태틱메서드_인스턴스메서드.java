@@ -1,6 +1,6 @@
 package JAVA_Basic;
 
-public class basic_14_스태틱메서드_인스턴스메서드 {
+public class basic_13_스태틱메서드_인스턴스메서드 {
 
     int a, b;
 
@@ -9,12 +9,11 @@ public class basic_14_스태틱메서드_인스턴스메서드 {
     }
 
     static int add(int a, int b){
+
         return a+b;
     }
-
     public static void main(String[] args) {
-        basic_14_스태틱메서드_인스턴스메서드 add = new basic_14_스태틱메서드_인스턴스메서드();
-
+        basic_13_스태틱메서드_인스턴스메서드 add = new basic_13_스태틱메서드_인스턴스메서드();
         adad();
 
         System.out.println(add.add());
@@ -30,7 +29,7 @@ public class basic_14_스태틱메서드_인스턴스메서드 {
     }
 
     public static void adad(){
-        basic_14_스태틱메서드_인스턴스메서드 add = new basic_14_스태틱메서드_인스턴스메서드();
+        basic_13_스태틱메서드_인스턴스메서드 add = new basic_13_스태틱메서드_인스턴스메서드();
 
         add.a = 3;
 
