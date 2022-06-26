@@ -21,5 +21,7 @@ public class basic_13_참조형반환타입 {
 
         return tmp;
 
+        //반환 타입이 참조형인 경우 객체의 주소를 반환한다
+
     }
 }
