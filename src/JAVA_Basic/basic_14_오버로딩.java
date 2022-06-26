@@ -10,8 +10,9 @@ public class basic_14_오버로딩 {
         int[]asdsssasd = {1,2,3,4,5,6};
 
         System.out.println(ad.add(asdsssasd));
-
-
+        System.out.println(ad.add(3,5));
+        System.out.println(ad.add(3L,2L));
+        System.out.println(ad.add(3L,3L));
     }
     int add(int a, int b){
         return a+b;
