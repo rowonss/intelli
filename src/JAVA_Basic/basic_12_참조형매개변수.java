@@ -15,9 +15,9 @@ public class basic_12_참조형매개변수 {
 
     }
 
-    static void change(basic_12_참조형매개변수 d){
-        d.x = 1000;
-        System.out.println(d.x);
+    static void change(basic_12_참조형매개변수 c){ //참조변수이기에 읽기와 쓰기 둘 다 가능 . 주소를 알기 때문
+        c.x = 1000;
+        System.out.println(c.x);
     }
 
 }
