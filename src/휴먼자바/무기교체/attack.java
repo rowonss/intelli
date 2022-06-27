@@ -2,11 +2,11 @@ package 휴먼자바.무기교체;
 
 public class attack {
 
-    int attpoint;
+    public String name;
 
-    int range;
+    public int attpoint;
 
-    public attack (){
+    public void attack (){
 
     }
 
