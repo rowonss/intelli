@@ -2,14 +2,11 @@ package 휴먼자바.무기교체;
 
 public class lence extends attack{
 
-    public lence(){
-        this.name = "랜스";
-        this.attpoint = 5;
-        System.out.println(this.name+"을(를) 장착하였습니다!");
-    }
+    String name = "랜스";
+    int attpoint = 15;
+    int range = 4;
 
-    @Override
-    public void attack (){
-        System.out.println(this.name+"로(으로) 공격");
+    public lence (){
+        super.attack(name, attpoint, range);
     }
 }
