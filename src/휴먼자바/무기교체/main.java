@@ -63,12 +63,12 @@ public class main {
                 }
                 System.out.println("슬라임들의 위치가 달라졌습니다!");
                 System.out.println("슬라임 위치에 따라 무기를 변경합니다");
-//                System.out.println("계속 하려면 엔터");
-//                String x = sc.nextLine();
+                System.out.println("계속 하려면 엔터");
+                String x = sc.nextLine();
                 int max = countrange();
                 System.out.println("가장 슬라임이 많이 위치한 거리는 " + max + "입니다");
-//                System.out.println("계속 하려면 엔터");
-//                x = sc.nextLine();
+                System.out.println("계속 하려면 엔터");
+                x = sc.nextLine();
                 if (max == 0) {
                     punch punch = new punch();
                 }
@@ -95,7 +95,7 @@ public class main {
                 hp = slhp.get(j);
                 System.out.println(attack.attpoint+"의 데미지를 입혀"+slhp.get(j)+"가 되었습니다");
                 Scanner xc = new Scanner(System.in);
-//                sc.nextLine();
+                sc.nextLine();
                 if(hp <= 0){
                     System.out.println(slname.get(j)+"의 체력이 0이하로 떨어졌습니다");
                     System.out.println(slname.get(j)+"이(가) 소멸됩니다");
