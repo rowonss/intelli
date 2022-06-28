@@ -6,9 +6,7 @@ public class basic_15_this2 {
     int door;
 
     basic_15_this2(){
-        color = "white";
-        type = "몰라";
-        door = 3;
+        this("white","auto",3);
     }
     basic_15_this2(String c, String t, int d){
         color = c;
