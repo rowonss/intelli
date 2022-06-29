@@ -13,7 +13,9 @@ public class main {
 
         star asd = new star();
 
-        asd.draw(100);
+        asd.draw(20);
+
+
 
 
 

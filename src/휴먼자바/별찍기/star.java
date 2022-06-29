@@ -9,30 +9,37 @@ public class star{
 
     public void draw (int x){
 
-        String kk = "";
-        int a = x;
+        String top = "";
 
-        for(int i=0; i<a;i++){
-            kk+=" ";
+        for(int i = 0; i<x/4; i++){
+            top+=" ";
+        }
+
+        for(int i = 0; i<x/2; i++){
+            top+="*";
+        }
+
+        String tt = "";
+
+        System.out.println(top);
+
+        for(int j = 0; j<x;j++){
+
+            tt += "*";
+
+            for(int i = 0 ; i<x-2; i++){
+                tt += " ";
+            }
+
+            tt += "*";
+
+            System.out.println(tt);
+            tt = "";
+
         }
 
 
-        for(int i=0; i<x; i++){
-
-            kk += "*";
-            kk = kk.substring(1);
-            System.out.println(kk);
-            kk += "*";
-        }
-        kk = kk.substring(1);
-        String dd = "";
-        for(int i=0; i<x-1; i++){
-            dd+=" ";
-            kk = kk.substring(1);
-            kk = kk.substring(1);
-            System.out.println(dd+kk);
-        }
-
+        System.out.println(top);
 
 
     }
