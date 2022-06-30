@@ -7,39 +7,44 @@ import java.util.ArrayList;
 public class star{
 
 
-    public void draw (int x){
+    public void draw (int x, int y){
 
-        String top = "";
+        String[] tt = new String[x];
 
-        for(int i = 0; i<x/4; i++){
-            top+=" ";
-        }
-
-        for(int i = 0; i<x/2; i++){
-            top+="*";
-        }
-
-        String tt = "";
-
-        System.out.println(top);
-
-        for(int j = 0; j<x;j++){
-
-            tt += "*";
-
-            for(int i = 0 ; i<x-2; i++){
-                tt += " ";
+        for (int i=0; i<x;i++ )
+        {
+            tt[i] = "";
+            if(i>9 && i<20){
+                for(int z=0; z<6; z++){
+                    tt[i]+="*";
+                }
+                for(int j=0; j<11; j++){
+                    tt[i]+=" ";
+                }
+                for(int k=0; k<43;k++){
+                    tt[i] +="*";
+                }
             }
 
-            tt += "*";
+            else{
+            for (int j = 0; j < y; j++) {
 
-            System.out.println(tt);
-            tt = "";
+                tt[i] += "*";
+            }
+        }
+        }
+
+        for(int i=10; i<20; i++){
+
 
         }
 
 
-        System.out.println(top);
+
+        for(int i=0; i<x; i++){
+            System.out.println(tt[i]);
+        }
+
 
 
     }

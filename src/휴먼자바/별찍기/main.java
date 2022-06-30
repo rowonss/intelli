@@ -13,12 +13,7 @@ public class main {
 
         star asd = new star();
 
-        asd.draw(20);
-
-
-
-
-
+        asd.draw(30, 60);
 
 
 
