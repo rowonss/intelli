@@ -21,6 +21,17 @@ public class samsung extends computer{
 
         asd.get();
 
+        computer computer = new samsung();
 
+        computer.getname();
+
+        zzz(asd);
+
+
+
+    }
+
+    public static void zzz (computer ss){
+        System.out.println("안뇽");
     }
 }
