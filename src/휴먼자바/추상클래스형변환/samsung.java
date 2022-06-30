@@ -5,14 +5,22 @@ public class samsung extends computer{
     String name = "asd";
 
     @Override
-    void getname() {
+    public void getname() {
         System.out.println(name);
     }
 
+    @Override
+    public void get() {
+        System.out.println("난 보이드야");
+    }
+
     public static void main(String[] args) {
-        computer asd = new computer(){};
+        samsung asd = new samsung(){};
 
         asd.getname();
+
+        asd.get();
+
 
     }
 }
