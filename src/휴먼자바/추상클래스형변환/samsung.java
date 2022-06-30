@@ -27,6 +27,8 @@ public class samsung extends computer{
 
         zzz(asd);
 
+        zzz(new samsung());
+
 
 
     }
