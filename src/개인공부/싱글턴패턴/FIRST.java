@@ -6,7 +6,7 @@ public class FIRST {
 
     public void setAndPrintSettings (){
         settings.setDarkMode(true);
-        settings.setFontSize(15);
+        settings.setFontSize(20);
 
         System.out.println(settings.getDarkMode() + " " + settings.getFontsize());
     }
