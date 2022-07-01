@@ -1,4 +1,4 @@
-package 개인공부.스트라티지패턴;
+package 패턴공부.스트라티지패턴;
 
 interface startegy {
     public void search ();

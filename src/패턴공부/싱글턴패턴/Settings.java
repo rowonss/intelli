@@ -1,4 +1,4 @@
-package 개인공부.싱글턴패턴;
+package 패턴공부.싱글턴패턴;
 
 public class Settings {
 
