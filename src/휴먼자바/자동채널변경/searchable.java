@@ -4,6 +4,8 @@ interface searchable {
 
     int[] channel = {10, 20, 25, 120};
 
+
+
     static int change(int x){
         int k=0;
         for(int i=0; i<channel.length; i++){

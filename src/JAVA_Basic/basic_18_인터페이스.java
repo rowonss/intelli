@@ -42,6 +42,11 @@ public class basic_18_인터페이스 extends 추상클래스 implements 인터�
         }
     }
 
+    @Override
+    public void zkzk(int x){
+        System.out.println("asdzxc");
+    }
+
     public static void main(String[] args) {
 
         basic_18_인터페이스 asd = new basic_18_인터페이스() {
