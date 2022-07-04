@@ -4,8 +4,6 @@ import static 휴먼자바.자동채널변경.searchable.change;
 
 public class 채널목록 implements searchable{
 
-    void 기본 (){};
-
     static void chanchan (int x){
         int ch = change(x);
         if(ch == 10){

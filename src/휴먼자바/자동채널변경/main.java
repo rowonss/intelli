@@ -3,15 +3,11 @@ package 휴먼자바.자동채널변경;
 import java.util.Scanner;
 
 
-public class main extends 채널목록{
-
-    public int 채널 = 0;
+public class main{
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
-        채널목록 list = new 채널목록();
 
         System.out.println("tv 전원을 켭니다");
 
@@ -19,7 +15,7 @@ public class main extends 채널목록{
 
         int num = sc.nextInt();
 
-        chanchan(num);
+        채널목록.chanchan(num);
 
     }
 }
