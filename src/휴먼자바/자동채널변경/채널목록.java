@@ -10,6 +10,10 @@ public class 채널목록 implements searchable{
 
     static void chanchan (int x){
         int ch = searchable.change(x);
+    void
+
+    static void chanchan (int x){
+        int ch = change(x);
         if(ch == 10){
             System.out.println("스포츠채널입니다");
         }
