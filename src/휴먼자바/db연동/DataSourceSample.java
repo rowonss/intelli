@@ -87,8 +87,8 @@ public class DataSourceSample {
     // Statement and ResultSet are AutoCloseable and closed automatically. 
     try (Statement statement = connection.createStatement()) {      
       try (ResultSet resultSet = statement
-          .executeQuery("select first_name, last_name from employees")) {
-        System.out.println("FIRST_NAME" + "  " + "LAST_NAME");
+          .executeQuery("select NAME, CONNECTINFO from SAVEINFO")) {
+        System.out.println("NAME" + "  " + "CONNECTINFO");
         System.out.println("---------------------");
         while (resultSet.next())
           System.out.println(resultSet.getString(1) + " "
