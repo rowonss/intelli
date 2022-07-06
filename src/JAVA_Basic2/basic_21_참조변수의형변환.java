@@ -2,6 +2,8 @@ package JAVA_Basic2;
 
 class car {
 
+    public void asd(){};
+
 }
 
 class fireengine extends car {
@@ -13,7 +15,8 @@ class fireengine extends car {
 public class basic_21_참조변수의형변환 {
 
     public static void main(String[] args) {
-        car car = null;
+
+        car car = new car();
 
         fireengine fe = new fireengine();
 
@@ -21,12 +24,13 @@ public class basic_21_참조변수의형변환 {
 
         fe.water();
 
-        car = fe;
-
 //        car.water();
 
-        fe2 = (fireengine)car; // 조상타입 -> 자손타입 형변환 생략 불가
-        fe2.water();
+        fe2 = (fireengine)car;
+
+
+
+
     }
 
 
