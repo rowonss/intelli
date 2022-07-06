@@ -18,7 +18,7 @@ public class customer extends jelly implements eat, select{
 
     @Override
     public void eat() {
-        System.out.println();
+        System.out.println("쪨리를 먹다");
 
     }
 
@@ -31,5 +31,10 @@ public class customer extends jelly implements eat, select{
         }
     }
 
+    public void selectedjelly() {
+        for(int i=0; i<jellys.length; i++){
+            System.out.println(selectedjelly.get(i));
+            }
+        }
+    }
 
-}

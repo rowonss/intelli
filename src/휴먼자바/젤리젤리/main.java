@@ -1,5 +1,7 @@
 package 휴먼자바.젤리젤리;
 
+import java.util.Scanner;
+
 import static 휴먼자바.젤리젤리.customer.customers;
 
 public class main{
@@ -13,7 +15,12 @@ public class main{
         }
         System.out.println("판매중인 젤리 목록");
         jelly.viewjellylist();
+        Scanner sc = new Scanner(System.in);
+        String jelly = sc.nextLine();
 
+        김종기.selectjelly(jelly);
+
+        김종기.selectedjelly();
 
 
     }
