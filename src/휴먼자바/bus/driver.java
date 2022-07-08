@@ -37,6 +37,17 @@ public class driver implements license {
 
     }
 
+    void payment(int value){
+        this.money -= value;
+        System.out.println("잔액"+this.money+"입니다");
+    }
+
+    void pointpayment(int value){
+        this.highpassPoint -= value;
+        System.out.println("남은 포인트는"+this.highpassPoint+"입니다");
+    }
+
+
     public void setNowarea(allroad nowarea) {
         this.nowarea = nowarea;
         this.nowArea = nowarea.name;
@@ -52,6 +63,14 @@ public class driver implements license {
                 System.out.println("고속도로에 진입합니다");
                 setNowarea(x);
                 System.out.println("요금은"+t.value+"원 입니다");
+                System.out.println(t.value+"원 결제합니다");
+                if(this.vehicle instanceof hipass){
+                    System.out.println("하이패스 이용자입니다");
+                    System.out.println("하이패스 포인트로 결제합니다");
+                    pointpayment(t.value);
+                }
+                payment(t.value);
+
             }
         }
         else{

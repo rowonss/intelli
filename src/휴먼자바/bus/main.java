@@ -8,8 +8,7 @@ public class main {
 
         taxi taxi = new taxi("택시");
 
-
-        driver 김종기 = new driver(5000,1000);
+        driver 김종기 = new driver(5000,5000);
 
 
         김종기.drive(taxi);
