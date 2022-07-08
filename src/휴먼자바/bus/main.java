@@ -9,14 +9,18 @@ public class main {
         taxi taxi = new taxi("택시");
 
 
-        driver 김종기 = new driver(5000,1000,bus);
+        driver 김종기 = new driver(5000,1000);
 
 
-        김종기.drive();
+        김종기.drive(taxi);
 
-        고속도로 경부고속도로 = new 고속도로(3000);
+        고속도로 경부고속도로 = new 고속도로(3000, "경부고속도로");
 
         김종기.driving(경부고속도로);
+
+        김종기.getNowarea();
+
+        일반도로 천안도로 = new 일반도로("천안도로");
 
 
 

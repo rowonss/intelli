@@ -1,35 +1,48 @@
 package 휴먼자바.bus;
 
-public class driver {
+public class driver implements license {
 
     int money;
     int highpassPoint;
     int speed;
-
+    type lisence;
     vehicle vehicle;
 
+    allroad nowarea;
+    String nowArea;
 
-    driver (int x, int y, vehicle z){
-        this.money = x;
-        this.highpassPoint = y;
-        this.vehicle = z;
+    driver(type x){
+        this.lisence = x;
     }
 
-    void drive(){
-        System.out.println(this.vehicle.name+"에 탑승했습니다");
-        if(this.vehicle instanceof bus){
+
+    driver (int x, int y){
+        this.money = x;
+        this.highpassPoint = y;
+    }
+
+    public void getNowarea() {
+        System.out.println(this.nowArea);
+    }
+
+    void drive(vehicle x){
+        this.vehicle = x;
+        System.out.println(x.name+"에 탑승했습니다");
+        if(x instanceof bus){
             System.out.println("요금은"+bus.price+"입니다");
         }
         else {
-
+            System.out.println("요금은"+taxi.price+"입니다");
         }
 
     }
-    driver (vehicle x){
-        this.vehicle = x;
+
+    public void setNowarea(allroad nowarea) {
+        this.nowarea = nowarea;
+        this.nowArea = nowarea.name;
     }
 
-    void driving(road x){
+    void driving(allroad x){
         if(x instanceof highway){
             if(this.vehicle instanceof bus){
                 System.out.println("버스는 고속도로에 진입 불가능합니다");
@@ -37,11 +50,13 @@ public class driver {
             else{
                 고속도로 t = (고속도로) x;
                 System.out.println("고속도로에 진입합니다");
+                setNowarea(x);
                 System.out.println("요금은"+t.value+"원 입니다");
             }
         }
         else{
             System.out.println("일반 도로에 진입합니다");
+            setNowarea(x);
         }
     }
 
