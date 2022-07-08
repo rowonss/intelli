@@ -1,5 +1,5 @@
 package 휴먼자바.bus;
 
-class vehicle {
+abstract class vehicle {
     String name;
 }

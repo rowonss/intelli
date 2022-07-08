@@ -6,9 +6,19 @@ public class main {
 
         bus bus = new bus("버스");
 
-        driver 김종기 = new driver(5000,1000);
+        taxi taxi = new taxi("택시");
 
-        김종기.drive(bus);
+
+        driver 김종기 = new driver(5000,1000,bus);
+
+
+        김종기.drive();
+
+        고속도로 경부고속도로 = new 고속도로(3000);
+
+        김종기.driving(경부고속도로);
+
+
 
 
 
