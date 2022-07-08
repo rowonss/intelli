@@ -15,11 +15,31 @@ public class main {
 
         고속도로 경부고속도로 = new 고속도로(3000, "경부고속도로");
 
+        일반도로 천안일반도로 = new 일반도로("천안일반도로");
+
+        일반도로 서울일반도로 = new 일반도로("서울일반도로");
+
+        김종기.driving(천안일반도로);
+
+        김종기.getspeed();
+
+        김종기.getNowarea();
+
         김종기.driving(경부고속도로);
 
         김종기.getNowarea();
 
-        일반도로 천안도로 = new 일반도로("천안도로");
+        김종기.getspeed();
+
+        김종기.driving(서울일반도로);
+
+        김종기.getNowarea();
+
+        김종기.getspeed();
+
+
+
+
 
 
 

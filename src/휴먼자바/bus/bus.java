@@ -4,10 +4,8 @@ public class bus extends vehicle{
 
     static int price = 1500;
 
-
-
     bus(String x){
-        super.name = x;
+        this.name = x;
     }
 
 

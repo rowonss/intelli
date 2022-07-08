@@ -5,7 +5,8 @@ public class taxi extends vehicle implements hipass {
     static int price = 2000;
 
     taxi(String x){
-        super.name = x;
+        this.name = x;
     }
+
 
 }
