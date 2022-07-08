@@ -11,8 +11,6 @@ public class main {
 
         scv.repair(tank);
 
-
-
         System.out.println(tank.hp);
     }
 }
