@@ -93,7 +93,6 @@ public class driver implements license {
                 else{
                     payment(t.value);
                 }
-
             }
         } else {
             System.out.println("일반 도로에 진입합니다");
