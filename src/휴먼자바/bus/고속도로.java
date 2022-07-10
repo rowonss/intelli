@@ -1,6 +1,6 @@
 package 휴먼자바.bus;
 
-public class 고속도로 extends allroad implements highway, GeneralRoad {
+public class 고속도로 extends allroad implements highway {
 
 
     int value;

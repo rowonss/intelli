@@ -6,19 +6,13 @@ public class driver implements license {
 
     int money;
     int highpassPoint;
-    int speed;
     type lisence;
     vehicle vehicle;
 
     allroad nowarea;
     String nowArea;
 
-    driver(type x) {
-        this.lisence = x;
-    }
-
-
-    driver(int money, int highpassPoint) {
+      {
         this.money = money;
         this.highpassPoint = highpassPoint;
     }

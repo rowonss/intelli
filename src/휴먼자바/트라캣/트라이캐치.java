@@ -1,6 +1,6 @@
 package 휴먼자바.트라캣;
 
-public class ㅁㄴㅇ {
+public class 트라이캐치 {
     public static void main(String[] args) {
 
         int[] score = {10,30,20};

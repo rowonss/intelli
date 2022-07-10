@@ -1,4 +1,4 @@
-package 패턴공부.싱글턴패턴;
+package 패턴공부.싱글톤패턴;
 
 public class program {
 
