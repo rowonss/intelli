@@ -17,6 +17,11 @@ public class driver implements license {
         this.highpassPoint = highpassPoint;
     }
 
+    public driver(int i, int i1) {
+          this.money = i;
+          this.highpassPoint = i1;
+    }
+
     public void getNowarea() {
         System.out.println(this.nowArea);
     }
