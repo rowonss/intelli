@@ -3,15 +3,17 @@ package JAVA_Basic2;
 
 class A {
     int i = 10;
-    class B {
+    static class B {
+        static A a = new A();
         int z = 10;
-        void method(){
-            System.out.println(i);
+        static void method(){
+            System.out.println(a.i);
+        }
+        static void m(){
+            System.out.println(a.i);
         }
     }
 }
-
-
 
 
 public class basic_24_내부클래스 {
@@ -19,6 +21,11 @@ public class basic_24_내부클래스 {
 
         A a = new A();
 
+        A.B z = new A.B();
+
+        A.B.method();
+
+        A.B.m();
 
     }
 }
