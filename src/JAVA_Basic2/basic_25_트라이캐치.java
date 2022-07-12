@@ -12,6 +12,7 @@ public class basic_25_트라이캐치 {
         }
         catch (Exception e){
             System.out.println("4");
+            System.out.println(e);
         }
         System.out.println("5");
     }
