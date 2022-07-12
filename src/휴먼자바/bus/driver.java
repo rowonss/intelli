@@ -12,11 +12,6 @@ public class driver implements license {
     allroad nowarea;
     String nowArea;
 
-      {
-        this.money = money;
-        this.highpassPoint = highpassPoint;
-    }
-
     public driver(int i, int i1) {
           this.money = i;
           this.highpassPoint = i1;
