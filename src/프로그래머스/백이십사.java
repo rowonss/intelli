@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class 백이십사 {
 
-    static int i = 6;
+    static int i = 9;
     static int T = 1;
     static int s = 0;
     static int x = 0;
@@ -28,6 +28,7 @@ public class 백이십사 {
 
         while (true) {
             s = i % 3;
+            x = i / 3;
             if (s == 0) {
                 asd.add("4");
             } else if (s == 1) {
@@ -35,13 +36,7 @@ public class 백이십사 {
             } else {
                 asd.add("2");
             }
-            x = i / 3;
             if (x == 0) {
-                if (i == 1) {
-                    asd.add("1");
-                } else if (i == 2) {
-                    asd.add("2");
-                }
                 break;
             }
             i = x;
