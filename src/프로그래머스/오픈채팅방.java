@@ -7,11 +7,10 @@ import java.util.Objects;
 
 public class 오픈채팅방 {
 
-    static ArrayList<ArrayList> main = new ArrayList<>();
 
     public static void main(String[] args) {
 
-        String[] a = {"Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo", "Change uid4567 Ryan"};
+        String[] a = {"Enter uid1244 kon", "Leave uid1244 kon", "Enter uid1244 Muzi", "Enter uid4567 Prodo","Change uid1244 babo", "Leave uid1234", "Enter uid1234 Prodo", "Change uid4567 Ryan"};
 
         String[] re = solution(a);
 
@@ -37,7 +36,7 @@ public class 오픈채팅방 {
             if (Objects.equals(asd[i][0], "Enter")) {
                 if (uid.contains(asd[i][1])) {
                     int ind = uid.indexOf(asd[i][1]);
-                    if (name.get(ind) != asd[i][2]) {
+                    if (!Objects.equals(name.get(ind), asd[i][2])) {
                         name.set(ind, asd[i][2]);
                     }
                 } else if (!uid.contains(asd[i][1])) {
@@ -84,13 +83,11 @@ public class 오픈채팅방 {
             }
         }
 
+        System.out.println(answer);
+
         String[] ans = new String[answer.size()];
 
-
-        for (int i = 0; i < answer.size(); i++) {
-            ans[i] = answer.get(i);
-        }
-
+        ans = answer.toArray(ans);
 
         return ans;
 
