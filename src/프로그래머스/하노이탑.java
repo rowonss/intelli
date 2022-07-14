@@ -10,6 +10,11 @@ public class 하노이탑 {
         for (int i = 0; i < tower.length; i++) {
             System.out.println(tower[i]);
         }
+
+
+
+
+
     }
 
      static ArrayList[] settower (int n){
@@ -25,6 +30,15 @@ public class 하노이탑 {
         for(int i=0; i<n+1; i++){
             TOWER[0].add(i,n-i+1);
         }
+
+
+
+
+
+
+
+
+
 
         return TOWER;
 
