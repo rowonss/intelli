@@ -23,10 +23,22 @@ public class 땅따먹기 {
                     continue;
                 }
                 if(land[i][j]>max){
+                    int x = 0;
+
+
+
+
                     max = land[i][j];
+                    System.out.println(max);
                     maxindex = j;
+
                 }
             }
+
+
+
+
+
             answer+=land[i][maxindex];
             index = maxindex;
         }
