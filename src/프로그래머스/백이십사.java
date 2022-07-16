@@ -4,25 +4,11 @@ import java.util.ArrayList;
 
 public class 백이십사 {
 
-    static int i = 9;
-    static int T = 1;
+    static int i = 39;
     static int s = 0;
     static int x = 0;
 
     public static void main(String[] args) {
-
-
-        System.out.println(40%3);
-//        1->1
-        System.out.println(40/3);
-        System.out.println(13%3);
-//         1->1
-        System.out.println(13/3);
-        System.out.println(4%3);
-//        1->1
-        System.out.println(4/3);
-        System.out.println(1%3);
-//        1->1
 
         ArrayList<String> asd = new ArrayList<>();
 
@@ -31,6 +17,7 @@ public class 백이십사 {
             x = i / 3;
             if (s == 0) {
                 asd.add("4");
+                x-=1;
             } else if (s == 1) {
                 asd.add("1");
             } else {
@@ -42,7 +29,12 @@ public class 백이십사 {
             i = x;
         }
 
-        System.out.println(asd);
+        String result ="";
+
+        for(int i=asd.size()-1;i>=0;i--){
+            result+=asd.get(i);
+        }
+        System.out.println(result);
 
 
     }
