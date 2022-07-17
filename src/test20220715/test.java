@@ -14,6 +14,7 @@ public class test {
 
         while(true){
             System.out.println(운전자리스트.size()+1+"번쨰 운전자 이름을 입력하세요");
+            System.out.println();
             String name = sc.nextLine();;
             운전자리스트.add(name);
             System.out.println(운전자리스트.size()+"번쨰 운전자 이름 입력 완료");
