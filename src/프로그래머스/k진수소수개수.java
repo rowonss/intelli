@@ -1,42 +1,53 @@
 package 프로그래머스;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class k진수소수개수 {
     public static void main(String[] args) {
-        ArrayList<Integer> prime = new ArrayList<>();
-        Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        if(num <= 1) return;
-
-        boolean[] arr = new boolean[num+1];
-        arr[0] = arr[1] = false;
-        for(int i=2; i<=num; i+=1) {
-            arr[i] = true;
-        }
-
-
-        for(int i=2; i*i<=num; i+=1) {
-            for(int j=i*i; j<=num; j+=i) {
-                arr[j] = false;
-            }
-        }
-        System.out.println("Prime number list from 2 to " + num + " : ");
-        for(int i=0; i<=num; i+=1) {
-            if(true == arr[i]) {
-                prime.add(i);
-            }
-        }
-        System.out.println(prime);
-
-        String a = Integer.toString(437674,3);
-
-        System.out.println(a);
-
-
-
-
 
     }
+        int n = 437674;
+        int k = 3;
+
+        String a = Integer.toString(n, k);
+
+        int answer = 0;
+
+        String[] asd = a.split("0");
+
+        public int solution(int n, int k) {
+            String a = Integer.toString(n, k);
+
+            int answer = 0;
+            String[] asd = a.split("0");
+
+            for (int i = 0; i < asd.length; i++) {
+                if (Objects.equals(asd[i], "")) {
+                    continue;
+                }
+                int count = 0;
+                long zxc = Long.parseLong(asd[i]);
+                if (is.isprime(zxc)) {
+                    answer += 1;
+                }
+            }
+
+            System.out.println(answer);
+
+            return answer;
+        }
 }
+ class is {
+    public static boolean isprime(long n){
+        if(n <= 1) return false;
+        else if(n == 2) return true;
+        for(int i = 2; i <= Math.sqrt(n); i++)
+            if(n % i == 0)
+                return false;
+        return true;
+    }
+}
+
