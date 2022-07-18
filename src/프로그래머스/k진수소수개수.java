@@ -1,9 +1,7 @@
 package 프로그래머스;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
-import java.util.Scanner;
+
 
 public class k진수소수개수 {
     public static void main(String[] args) {
