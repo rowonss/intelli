@@ -1,40 +1,34 @@
 package 프로그래머스;
 
-import java.util.Objects;
 import java.util.Stack;
 
 public class 짝지어제거하기 {
 
-    public static void main(String[] args) {
+    static Stack<Character> st = new Stack<>();
 
-        System.out.println(answer("baabaa"));
+    public static void main(String[] args) {
+        String asd = "cdcd";
+        System.out.println(answer(asd));
 
     }
 
     public static int answer(String a) {
 
-       Stack st = new Stack();
-        st.push(String.valueOf(a.charAt(0)));
+        for (int x = 0; x < a.length(); x++) {
+            char z = a.charAt(x);
+            if(!st.isEmpty() && st.peek() == z){
+                st.pop();
+            }
+            else{
+                st.push(z);
+            }
+        }
 
-       for(int i=1; i<a.length();i++){
-           String zxc = (String) st.peek();
-           String asd = String.valueOf(a.charAt(i));
-           if(Objects.equals(zxc, asd)){
-               st.pop();
-           }
-           else{
-               st.push(asd);
-           }
-       }
-
-       if(st.empty() == true){
-           return 0;
-       }
-       else {
-           return 1;
-       }
-
-
+        if (st.empty()) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 
 }
