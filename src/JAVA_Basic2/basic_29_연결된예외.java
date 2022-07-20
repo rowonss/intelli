@@ -11,13 +11,13 @@ public class basic_29_연결된예외 {
 
 }
 
-//    class Throwable implements Serializable {
-//        private Throwable cause = this; //객체 자신을 원인 예외로 등록
-//
-//        public synchronized Throwable initcause(Throwable cause) {
-//            this.cause = cause;
-//            return this;
-//        }
-//
-//    }
-//}
+    class Throwable implements Serializable {
+        private Throwable cause = this; //객체 자신을 원인 예외로 등록
+
+        public synchronized Throwable initcause(Throwable cause) {
+            this.cause = cause;
+            return this;
+        }
+
+    }
+
