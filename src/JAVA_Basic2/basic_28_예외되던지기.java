@@ -20,5 +20,6 @@ public class basic_28_예외되던지기 {
             System.out.println("예외 처리 됨");
             throw e;
         }
+
     }
 }
