@@ -9,7 +9,6 @@ public class basic_32_Object클래스 {
 
     }
 }
-
 class hi {
 
 }
