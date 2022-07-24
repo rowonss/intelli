@@ -8,6 +8,7 @@ public class basic_3_반올림 {
         double shortpi = Math.round(pi * 1000) / 1000.0;
         // 원하는 소수자리까지 반환
         // 1000을 곱하고 1000으로 나누면 된다
+        System.out.println();
         System.out.println(shortpi);
     }
 }
