@@ -14,6 +14,7 @@ public class 백준7_주어진수더하기 {
         StringBuffer asd = new StringBuffer();
 
         System.out.println();
+        System.out.println();
 
         for(int i=0; i<a; i++){
             int z = Integer.parseInt(br.readLine())+ Integer.parseInt(br.readLine());
