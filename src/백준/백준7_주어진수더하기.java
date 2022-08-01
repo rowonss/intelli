@@ -18,6 +18,7 @@ public class 백준7_주어진수더하기 {
         System.out.println();
         System.out.println();
         System.out.println();
+        System.out.println();
 
         for(int i=0; i<a; i++){
             int z = Integer.parseInt(br.readLine())+ Integer.parseInt(br.readLine());
@@ -25,6 +26,8 @@ public class 백준7_주어진수더하기 {
         }
 
     }
+
+
 
     public String solution(String phone_number) {
 
