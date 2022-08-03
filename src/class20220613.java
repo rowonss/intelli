@@ -11,6 +11,7 @@ public class class20220613 {
         inputArray.add("Jane");
         inputArray.add("kim");
         System.out.println();
+        System.out.println();
 
         System.out.println((inputArray));
         System.out.println();
