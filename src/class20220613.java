@@ -10,6 +10,7 @@ public class class20220613 {
         ArrayList<String> inputArray = new ArrayList<String>();
         inputArray.add("Jane");
         inputArray.add("kim");
+        System.out.println();
 
         System.out.println((inputArray));
         System.out.println();
