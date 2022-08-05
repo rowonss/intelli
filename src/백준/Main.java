@@ -14,6 +14,8 @@ public class Main {
 
         int a = Integer.parseInt(br.readLine());
 
+        System.out.println();
+
 
         for(int i=0; i<a; i++){
 
