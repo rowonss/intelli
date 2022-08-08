@@ -10,5 +10,6 @@ public class 해시셋연습 {
         set.add(4);
 
         System.out.println(set);
+        System.out.println();
     }
 }
