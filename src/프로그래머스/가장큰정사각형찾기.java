@@ -7,7 +7,10 @@ public class 가장큰정사각형찾기 {
         int[][] a = {{0,1,1,1},{1,1,1,1},{1,1,1,1},{0,0,1,0}};
 
         answer(a);
+        System.out.println();
     }
+
+
 
     static void answer(int[][] a){
 
