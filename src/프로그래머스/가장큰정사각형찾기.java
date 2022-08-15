@@ -9,6 +9,7 @@ public class 가장큰정사각형찾기 {
         answer(a);
         System.out.println();
         System.out.println();
+        System.out.println();
     }
 
 
