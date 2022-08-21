@@ -27,6 +27,7 @@ public class 성격유형검사 {
         StringBuilder asdzxc = new StringBuilder();
 
         System.out.println();
+        System.out.println();
 
 
 
