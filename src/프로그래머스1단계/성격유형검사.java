@@ -28,6 +28,7 @@ public class 성격유형검사 {
 
         System.out.println();
         System.out.println();
+        System.out.println();
 
 
 
