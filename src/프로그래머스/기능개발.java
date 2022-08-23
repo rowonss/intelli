@@ -11,10 +11,12 @@ public class 기능개발 {
     static int i = 1;
     static int count = 0;
 
+
     public static void main(String[] args) {
         int[] pro = {93, 30, 55};
         int[] spd = {1, 30, 5};
         answer(pro, spd);
+        System.out.println();
     }
     static void answer(int[] a, int[] b) {
         ArrayList<Integer> answer = new ArrayList<>();
