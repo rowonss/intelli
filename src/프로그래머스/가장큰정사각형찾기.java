@@ -11,9 +11,6 @@ public class 가장큰정사각형찾기 {
         System.out.println();
         System.out.println();
     }
-
-
-
     static void answer(int[][] a){
 
         int x = a[0].length;
@@ -32,8 +29,6 @@ public class 가장큰정사각형찾기 {
         }
 
         value = q*q;
-
-
 
         while(true){
             int kkk = 0;
