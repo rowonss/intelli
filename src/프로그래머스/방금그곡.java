@@ -1,27 +1,107 @@
 package 프로그래머스;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Objects;
 
 public class 방금그곡 {
     public static void main(String[] args) {
 
-        String m = "ABCDEFG";
-        String[] musicinfos = {"12:00,12:14,HELLO,CDEFGAB", "13:00,13:05,WORLD,ABCDEF"};
+        String m = "CC#BCC#BCC#BCC#B";
+        String[] musicinfos = {"03:00,03:30,FOO,CC#B", "04:00,04:08,BAR,CC#BCC#BCC#B"};
 
-        song(m, musicinfos);
+        System.out.println(song(m, musicinfos));
 
     }
 
-    static void song (String m, String[] musicinfos){
+    static String song (String m, String[] musicinfos){
 
-        ArrayList<String[]> mu = new ArrayList();
+        ArrayList<Integer> musictime = new ArrayList<>();
+        ArrayList<String> musicname = new ArrayList<>();
+
         ArrayList<String> musics = new ArrayList();
+        String code = "ABCDEFG";
 
         for(int i=0; i< musicinfos.length; i++){
             String[] a = musicinfos[i].split(",");
-            timegap(a[0],a[1]);
+            String longlong = "";
+            for(int j=0;j<1000;j++){
+                longlong += a[3];
+            }
+            ArrayList<String> codes = new ArrayList<>();
+            ArrayList<String> catcher = new ArrayList<>();
+
+            int gapgap = timegap(a[0],a[1]);
+
+            for(int k=0;k<gapgap;k++){
+                String add ="";
+                add += String.valueOf(longlong.charAt(k));
+                String s = String.valueOf(longlong.charAt(k + 1));
+                if(!code.contains(s)){
+                    add += s;
+                    gapgap++;
+                    k++;
+                }
+                codes.add(add);
+            }
+
+
+            for(int q=0; q<m.length(); q++){
+                String zzz ="";
+                zzz += String.valueOf(m.charAt(q));
+                String s = "";
+                if(q!=m.length()-1){
+                    s = String.valueOf(m.charAt(q + 1));
+                }
+
+                if(!code.contains(s)){
+                    zzz += s;
+                    q++;
+                }
+                catcher.add(zzz);
+            }
+
+//            System.out.println(catcher);
+//            System.out.println(codes);
+//            System.out.println(codes.size());
+
+            for(int z=0; z<codes.size()-catcher.size()+1;z++){
+                String jerry = "";
+                String caught = "";
+
+                for(int l=0;l<catcher.size();l++){
+                    caught += catcher.get(l);
+                    jerry += codes.get(z+l);
+                }
+                System.out.println(caught);
+                System.out.println(jerry);
+
+                if(jerry.equals(caught)){
+                    if(!musicname.contains(a[2])){
+                        musicname.add(a[2]);
+                        musictime.add(timegap(a[0],a[1]));
+                        break;
+                    }
+                }
+            }
         }
 
+
+        System.out.println(musicname.get(musictime.indexOf(Collections.max(musictime))));
+
+        if(musicname.size()==1){
+            return musicname.get(0);
+        }
+        else if(musicname.size()>1){
+
+            if(Collections.frequency(musictime,Collections.max(musictime))>1){
+               return musicname.get(0);
+            }
+            return musicname.get(musictime.indexOf(Collections.max(musictime)));
+        }
+        else {
+            return "(None)";
+        }
     }
 
     static int timegap(String start, String end){
@@ -31,6 +111,19 @@ public class 방금그곡 {
         int Tgap = 0;
         int Mgap = 0;
 
+        Tgap = Integer.parseInt(E[0])-Integer.parseInt(S[0]);
+        if(Integer.parseInt(E[1]) > Integer.parseInt(S[1])){
+            Mgap = Integer.parseInt(E[1])-Integer.parseInt(S[1]);
+        }
+        else{
+            Mgap = Integer.parseInt(E[1])+60-Integer.parseInt(S[1]);
+        }
+
+        int gaps = Mgap;
+        if(Tgap!=0){
+            gaps += (Tgap-1)*60;
+        }
+        return gaps;
 
     }
 }
