@@ -7,8 +7,8 @@ import java.util.Objects;
 public class 방금그곡 {
     public static void main(String[] args) {
 
-        String m = "CC#BCC#BCC#BCC#B";
-        String[] musicinfos = {"03:00,03:30,FOO,CC#B", "04:00,04:08,BAR,CC#BCC#BCC#B"};
+        String m = "ABC";
+        String[] musicinfos = {"23:55,00:05,HI,ABC#ABC"};
 
         System.out.println(song(m, musicinfos));
 
@@ -45,7 +45,6 @@ public class 방금그곡 {
                 codes.add(add);
             }
 
-
             for(int q=0; q<m.length(); q++){
                 String zzz ="";
                 zzz += String.valueOf(m.charAt(q));
@@ -61,9 +60,11 @@ public class 방금그곡 {
                 catcher.add(zzz);
             }
 
-//            System.out.println(catcher);
-//            System.out.println(codes);
-//            System.out.println(codes.size());
+            System.out.println(codes);
+
+            if(catcher.size() > codes.size()){
+                continue;
+            }
 
             for(int z=0; z<codes.size()-catcher.size()+1;z++){
                 String jerry = "";
@@ -73,8 +74,6 @@ public class 방금그곡 {
                     caught += catcher.get(l);
                     jerry += codes.get(z+l);
                 }
-                System.out.println(caught);
-                System.out.println(jerry);
 
                 if(jerry.equals(caught)){
                     if(!musicname.contains(a[2])){
@@ -85,9 +84,6 @@ public class 방금그곡 {
                 }
             }
         }
-
-
-        System.out.println(musicname.get(musictime.indexOf(Collections.max(musictime))));
 
         if(musicname.size()==1){
             return musicname.get(0);
