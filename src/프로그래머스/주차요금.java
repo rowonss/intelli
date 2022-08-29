@@ -1,23 +1,22 @@
 package 프로그래머스;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-import java.util.TreeMap;
+import javax.swing.*;
+import java.util.*;
 
 public class 주차요금 {
     public static void main(String[] args) {
 
-        int[] fees = {180, 5000, 10, 600};
-        String[] records = {"05:34 5961 IN", "06:00 0000 IN", "06:34 0000 OUT", "07:59 5961 OUT", "07:59 0148 IN", "18:59 0000 IN", "19:09 0148 OUT", "22:59 5961 IN", "23:00 5961 OUT"};
+        int[] fees = {1, 10, 1, 11};
+        String[] records = {"00:00 1234 IN", "00:02 1234 OUT"};
 
-        answer(fees,records);
+        System.out.println(answer(fees,records));
     }
 
 
-    static void answer (int[] fees, String[] records){
-        Map<String,String> InandOut = new TreeMap<>();
-        Map<String,Integer> Result = new TreeMap<>();
+    static ArrayList<Integer> answer (int[] fees, String[] records){
+        TreeMap<String,String> InandOut = new TreeMap<>();
+        TreeMap<String,Integer> Result = new TreeMap<>();
+        ArrayList<Integer> answer = new ArrayList<>();
 
         for(int i=0;i<records.length; i++){
             String[] setrecord = records[i].split(" ");
@@ -38,20 +37,28 @@ public class 주차요금 {
         }
         for(String keys:InandOut.keySet()){
             int lastput = timegap(InandOut.get(keys),"23:59");
-            Result.replace(keys,Result.get(keys)+lastput);
+            if(!Result.containsKey(keys)){
+                Result.put(keys,lastput);
+            }
+            else {
+                Result.replace(keys,Result.get(keys)+lastput);
+            }
         }
 
-
-
-
-
-
-
-
-
-        System.out.println(InandOut);
-        System.out.println(Result);
-
+        for(String keys: Result.keySet()){
+            int trash = 0;
+            if(Result.get(keys) > fees[0]){
+                if((Result.get(keys)-fees[0])%fees[2]>0){
+                    trash = fees[3];
+                }
+                Result.replace(keys,(Result.get(keys)-fees[0])/fees[2]*fees[3]+fees[1]+trash);
+            }
+            else {
+                Result.replace(keys,fees[1]);
+            }
+            answer.add(Result.get(keys));
+        }
+        return answer;
     }
     static int timegap(String start, String end) {
         String[] S = start.split(":");
