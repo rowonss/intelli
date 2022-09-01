@@ -16,9 +16,9 @@ public class 행려의곱셈 {
 
         for(int i=0;i<arr1.length;i++){
             ArrayList<Integer> inner = new ArrayList<>();
-            for(int j=0;j<arr1[i].length;j++){
+            for(int j=0;j<arr2[0].length;j++){
                 int a = 0;
-                for(int z=0;z<arr2[0].length;z++){
+                for(int z=0;z<arr2.length;z++){
                     a += arr1[i][z] * arr2[z][j];
                 }
                 inner.add(a);
