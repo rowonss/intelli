@@ -1,5 +1,6 @@
 package 프로그래머스;
 
+
 import java.util.*;
 
 public class 더맵게 {
@@ -11,33 +12,65 @@ public class 더맵게 {
     }
 
     static int answer (int[] scoville, int K){
-        int maxindex;
-        TreeSet<Integer> tree = new TreeSet<>();
+
+        PriorityQueue<Integer> que = new PriorityQueue<>();
+        PriorityQueue<Integer> zxc = new PriorityQueue<>();
+
         for(int i=0;i<scoville.length;i++){
-            tree.add(scoville[i]);
+            que.add(scoville[i]);
         }
 
-        TreeSet<Integer> asd = new TreeSet<>();
+        while(true){
+            if(que.size()==0){
+                break;
+            }
+            int a = que.peek();
+            if(a<K){
+                zxc.add(a);
+                que.poll();
+            }
+            else {
+                break;
+            }
+        }
 
-        for(int i=0; i<tree.headSet(K).size()+1;i++){
-            asd.add(tree.first());
-            tree.pollFirst();
+        int max = zxc.size()-2;
+
+        while (zxc.size()>=1){
+            que.add(zxc.poll());
         }
 
         int count = 0;
 
-        System.out.println(asd);
+        while (max>=0 && que.size()>1){
+            System.out.println(max);
+            if(max == 0){
+                return count;
+            }
+            int min1 = 0;
+            int min2 = 0;
 
-        while (asd.size() >= 1){
+            min1 = que.poll();
+            min2 = que.poll();
 
-            int min1 = asd.first();
-            tree.pollFirst();
-            int min2 = asd.first();
-            tree.pollFirst();
             int min3 = min1 + (min2*2);
             count ++;
+
+            if(que.size()==0){
+                if(min3<K){
+                    return -1;
+                }
+                else {
+                    return count;
+                }
+            }
+
             if(min3 < K){
-                asd.add(min3);
+                que.add(min3);
+            }
+            else {
+                que.add(min3);
+                max --;
             }
         }
 
