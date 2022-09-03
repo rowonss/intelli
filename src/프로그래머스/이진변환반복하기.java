@@ -9,7 +9,7 @@ public class 이진변환반복하기 {
 
     }
 
-    static void answer(String s){
+    static int[] answer(String s){
 
         int count = 0;
         int zerocount = 0;
@@ -20,20 +20,20 @@ public class 이진변환반복하기 {
             int cnt = 0;
             count ++;
             for(int i=0; i<a.length(); i++){
-                if(a.charAt(i) != 0){
+                if(a.charAt(i) != '0'){
                     cnt += 1;
                 }
                 else {
                     zerocount ++;
                 }
             }
+            System.out.println(cnt);
             a = Integer.toBinaryString(cnt);
         }
 
-        System.out.println(count);
-        System.out.println(zerocount);
+        int[] ss = {count,zerocount};
 
-
+        return ss;
 
     }
 }
