@@ -27,7 +27,6 @@ public class 이진변환반복하기 {
                     zerocount ++;
                 }
             }
-            System.out.println(cnt);
             a = Integer.toBinaryString(cnt);
         }
 
