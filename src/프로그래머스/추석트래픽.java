@@ -48,6 +48,7 @@ public class 추석트래픽 {
 
         System.out.println();
         System.out.println();
+        System.out.println();
 
         System.out.println();
 
