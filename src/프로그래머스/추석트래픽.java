@@ -46,6 +46,8 @@ public class 추석트래픽 {
 
         System.out.println(starttime);
 
+        System.out.println();
+
         int max = 0;
 
         while (true){
