@@ -42,7 +42,7 @@ public class 추석트래픽 {
 
         Long start = starttime.first();
 
-
+        System.out.println();
         System.out.println(start);
 
         System.out.println(starttime);
