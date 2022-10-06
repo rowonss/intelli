@@ -60,6 +60,13 @@ public class 안전지대 {
                 }
             }
         }
+        System.out.println(Arrays.toString(asd.get(1)));
+        System.out.println(Arrays.toString(asd.get(2)));
+        System.out.println(Arrays.toString(asd.get(3)));
+        System.out.println(Arrays.toString(asd.get(4)));
+        System.out.println(Arrays.toString(asd.get(5)));
+
+
 
         System.out.println(count);
     }
