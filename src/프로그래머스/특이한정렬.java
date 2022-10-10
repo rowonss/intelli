@@ -19,6 +19,7 @@ public class 특이한정렬 {
 
 
 
+
         for(int i=0; i<numlist.length; i++){
             nums.add(numlist[i]);
         }
