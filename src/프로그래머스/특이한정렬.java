@@ -42,6 +42,7 @@ public class 특이한정렬 {
 
 
 
+
         for(int i=0; i<z.length; i++){
             if(i!=z.length-1){
                 if(Objects.equals(a.get(z[i]), a.get(z[i + 1]))){
