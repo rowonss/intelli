@@ -34,6 +34,10 @@ public class 특이한정렬 {
 
         a = sortByValue(a);
 
+        String a = 'asd';
+
+        System.out.println(a);
+
         ArrayList<Integer> answer = new ArrayList<>();
 
         Object[] z = a.keySet().toArray();
