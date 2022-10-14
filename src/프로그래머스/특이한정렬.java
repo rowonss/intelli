@@ -38,6 +38,7 @@ public class 특이한정렬 {
 
         System.out.println(a);
 
+
         ArrayList<Integer> answer = new ArrayList<>();
 
         Object[] z = a.keySet().toArray();
