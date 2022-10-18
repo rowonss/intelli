@@ -21,6 +21,7 @@ public class 연속부분수합의개수 {
 
         TreeSet<Integer> oh = new TreeSet<>();
 
+
         for(int i=1; i<=elements.length; i++){
            for(int j=0; j<elements.length; j++){
                oh.add(Arrays.stream(Arrays.copyOfRange(zxc,j,j+i)).sum());
