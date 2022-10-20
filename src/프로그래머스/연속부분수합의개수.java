@@ -12,6 +12,7 @@ public class 연속부분수합의개수 {
         answer(a);
     }
 
+
     static void answer (int[] elements){
 
         int[] zxc = new int[elements.length + elements.length];
