@@ -10,7 +10,6 @@ public class 연속부분수합의개수 {
         int[] a = {7,9,1,1,4};
 
         answer(a);
-
     }
 
 
