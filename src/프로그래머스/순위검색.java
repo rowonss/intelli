@@ -1,8 +1,6 @@
 package 프로그래머스;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
+import java.util.*;
 
 public class 순위검색 {
 
@@ -17,10 +15,10 @@ public class 순위검색 {
     static ArrayList<Integer> solution(String[] info, String[] query) {
 
         ArrayList<Integer> answer = new ArrayList<>();
-        ArrayList<Integer> scores = new ArrayList<>();
+        TreeMap<Integer, Integer> scores = new TreeMap<>();
 
-        for(String x : info){
-           scores.add(Integer.parseInt(x.split(" ")[4]));
+        for(int i=0; i < info.length; i++){
+           scores.put(Integer.parseInt(info[i].split(" ")[4]),i);
         }
 
         System.out.println(scores);
@@ -31,8 +29,9 @@ public class 순위검색 {
 
             String[] split = query[i].split(" ");
 
-            for(int j=0; j<info.length; j++) {
-                if (scores.get(j) >= Integer.parseInt(split[7])) {
+            for(int j=scores.size(); j>=0; j--) {
+                TreeMap<Integer,Integer> copy = scores;
+                if (copy.pollLastEntry().getValue()>= Integer.parseInt(split[7])) {
                     if (info[j].contains(split[0]) || Objects.equals(split[0], "-")) {
                         if (info[j].contains(split[2]) || Objects.equals(split[2], "-")) {
                             if (info[j].contains(split[4]) || Objects.equals(split[4], "-")) {
