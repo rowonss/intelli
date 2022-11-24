@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 
 public class class20220613 {
-
     public static void main(String[] args){
 
         ArrayList<String> inputArray = new ArrayList<String>();
